@@ -80,10 +80,28 @@ void Output::CreateDrawToolBar() const
 	//To control the order of these images in the menu, 
 	//reoder them in UI_Info.h ==> enum DrawMenuItem
 	string MenuItemImages[DRAW_ITM_COUNT];
-	MenuItemImages[ITM_RECT] = "images\\MenuItems\\Menu_Rect.jpg";
-	MenuItemImages[ITM_CIRC] = "images\\MenuItems\\Menu_Circ.jpg";
-	MenuItemImages[ITM_EXIT] = "images\\MenuItems\\Menu_Exit.jpg";
-
+	MenuItemImages[ITM_RECT] = "images\\MenuItems\\rect.jpg";
+	MenuItemImages[ITM_CIRC] = "images\\MenuItems\\circle.jpg";
+	MenuItemImages[ITM_LINE] = "images\\MenuItems\\line.jpg";
+	MenuItemImages[ITM_TRI]= "images\\MenuItems\\triangle.jpg";
+	MenuItemImages[ITM_CHNG_DCLR]= "images\\MenuItems\\draw_color.jpg";
+	MenuItemImages[ITM_CHNG_FCLR]= "images\\MenuItems\\fill_icon.jpg";
+	MenuItemImages[ITM_DELETE]= "images\\MenuItems\\delete.jpg";
+	MenuItemImages[ITM_SLCT]= "images\\MenuItems\\select.jpg";
+	MenuItemImages[ITM_COPY]= "images\\MenuItems\\copy_icon.jpg";
+	MenuItemImages[ITM_CUT]= "images\\MenuItems\\cut_icon.jpg";
+	MenuItemImages[ITM_PASTE]= "images\\MenuItems\\paste.jpg";
+	MenuItemImages[ITM_ADD] = "images\\MenuItems\\upload_icon.jpg";
+	MenuItemImages[ITM_ZOOM_IN] = "images\\MenuItems\\zoom in.jpg";
+	MenuItemImages[ITM_ZOOM_OUT] = "images\\MenuItems\\zoom out.jpg";
+	MenuItemImages[ITM_RESIZE]= "images\\MenuItems\\resize.jpg";
+	MenuItemImages[ITM_ROTATE]= "images\\MenuItems\\rotate_icon.jpg";
+	MenuItemImages[ITM_BTF]= "images\\MenuItems\\bringtofront.jpg";
+	MenuItemImages[ITM_STB]= "images\\MenuItems\\sendtoback.jpg";
+	MenuItemImages[ITM_SAVE]= "images\\MenuItems\\save_icon.jpg";
+	MenuItemImages[ITM_SWITCH_PLAY] = "images\\MenuItems\\to_play.jpg";
+	MenuItemImages[ITM_EXIT] = "images\\MenuItems\\exit.jpg";
+	
 	//TODO: Prepare images for each menu item and add it to the list
 
 	//Draw menu item one image at a time
@@ -102,14 +120,18 @@ void Output::CreateDrawToolBar() const
 void Output::CreatePlayToolBar() const
 {
 	UI.InterfaceMode = MODE_PLAY;
-	///TODO: write code to create Play mode menu
+	pWind->SetPen(UI.BkGrndColor, 1);
+	pWind->SetBrush(UI.BkGrndColor);
+	pWind->DrawRectangle(0, 0, UI.width, UI.height - UI.ToolBarHeight);
 
-	string MenuItemImages[PLAY_ITM_COUNT];
-	MenuItemImages[ITM_TYPE] = "images\\MenuItems\\Menu_Rect.jpg";
-	MenuItemImages[ITM_COLOR] = "images\\MenuItems\\Menu_Circ.jpg";
-	MenuItemImages[ITM_TYPE_COLOR] = "images\\MenuItems\\Menu_Exit.jpg";
-	MenuItemImages[ITM_AREA] = "images\\MenuItems\\Menu_Exit.jpg";
-	MenuItemImages[ITM_EXIT] = "images\\MenuItems\\Menu_Exit.jpg";
+	string MenuItemImages2[PLAY_ITM_COUNT];
+	MenuItemImages2[ITM_P_H_FSHAPE] = "images\\MenuItems\\Pickbyshape.jpg";
+	MenuItemImages2[ITM_P_H_FCOLOR] = "images\\MenuItems\\Pickbycolor.jpg";
+	MenuItemImages2[ITM_P_H_FBOTH] = "images\\MenuItems\\Pickbyboth.jpg";
+	MenuItemImages2[ITM_AREA]= "images\\MenuItems\\area.jpg";
+	MenuItemImages2[ITM_SWITCH_DRAW ] = "images\\MenuItems\\to_draw.jpg";
+
+	MenuItemImages2[ITM_EXIT2] = "images\\MenuItems\\exit.jpg";
 
 
 	//Draw menu item one image at a time
