@@ -19,9 +19,28 @@ enum DrawMenuItem //The items of the Draw menu (you should add more items)
 	//If you want to change the menu items order, change the order here
 	ITM_RECT,		//Recangle item in menu
 	ITM_CIRC,		//Circle item in menu
+	ITM_LINE,
+	ITM_TRI,
+	ITM_CHNG_DCLR,		//Change draw color item in menu
+	ITM_CHNG_FCLR,     //Change fill color item in menu
+	ITM_DELETE,				//Delete item in menu
+	ITM_SLCT,
+	ITM_COPY,				//Copy item in menu
+	ITM_CUT,				//Cut item in menu
+	ITM_PASTE,				//Paste item in menu
+	ITM_ZOOM_IN,
+	ITM_ZOOM_OUT,
+	ITM_RESIZE,
+	ITM_ADD,				//Load item in menu
+	ITM_ROTATE,				//Rotate item in menu
+	ITM_BTF,				//Bring to front item in menu
+	ITM_STB,				//Send to back item in menu
+	ITM_SAVE,				//Save item in menu
 	
-	//TODO: Add more items names here
-	ITM_TO_PLAY,
+	
+	ITM_SWITCH_PLAY,           //switch to play mode	
+	
+
 	ITM_EXIT,		//Exit item
 	
 	DRAW_ITM_COUNT		//no. of menu items ==> This should be the last line in this enum
@@ -34,14 +53,12 @@ enum PlayMenuItem //The items of the Play menu (you should add more items)
 	//If you want to change the menu items order, change the order here
 	
 	//TODO: Add more items names here
-	ITM_TYPE,
-	ITM_COLOR,
-	ITM_TYPE_COLOR,
+ITM_P_H_FSHAPE,
+	ITM_P_H_FCOLOR,
+	ITM_P_H_FBOTH,
 	ITM_AREA,
-	ITM_TO_DRAW,
-	ITM_exit,
-
-
+	ITM_SWITCH_DRAW,
+	ITM_EXIT2,
 	PLAY_ITM_COUNT		//no. of menu items ==> This should be the last line in this enum
 	
 };
