@@ -52,7 +52,24 @@ ActionType Input::GetUserAction() const
 			{
 			case ITM_RECT: return DRAW_RECT;
 			case ITM_CIRC: return DRAW_CIRC;
-			case ITM_TO_PLAY: return TO_PLAY;
+			case ITM_LINE: return DRAW_LINE;
+			case ITM_TRI: return DRAW_TRI;
+			case ITM_CHNG_DCLR: return CHNG_DRAW_CLR;
+			case ITM_CHNG_FCLR: return CHNG_FILL_CLR;
+			case ITM_DELETE: return DEL;
+			case ITM_SLCT: return SELECT;
+			case ITM_COPY: return COPY;
+			case ITM_CUT: return CUT;
+			case ITM_PASTE: return PASTE;
+			case ITM_ZOOM_IN: return ZOOM_IN;
+			case ITM_ZOOM_OUT: return ZOOM_OUT;
+			case ITM_ADD: return LOAD;
+			case ITM_ROTATE: return ROTATE;
+			case ITM_RESIZE: return RESIZE;
+			case ITM_BTF: return BRNG_FRNT;
+			case ITM_STB: return SEND_BACK;
+			case ITM_SAVE: return SAVE;
+			case ITM_SWITCH_PLAY: return TO_PLAY;
 			case ITM_EXIT: return EXIT;	
 			
 			default: return EMPTY;	//A click on empty place in desgin toolbar
@@ -86,12 +103,12 @@ ActionType Input::GetUserAction() const
 
 			switch (ClickedItemOrder)
 			{
-			case ITM_TYPE: return PICK_TYPE;
-			case ITM_COLOR: return PICK_COLOR;
-			case ITM_TYPE_COLOR: return PICK_TYPE_COLOR;
+			case ITM_P_H_FSHAPE: return PICK_TYPE;
+			case ITM_P_H_FCOLOR: return PICK_COLOR;
+			case ITM_P_H_FBOTH: return PICK_TYPE_COLOR;
 			case ITM_AREA: return PICK_AREA;
-			case ITM_TO_DRAW: return TO_DRAW;
-			case ITM_exit: return EXIT;
+			case ITM_SWITCH_DRAW: return TO_DRAW;
+			case ITM_EXIT2: return EXIT;
 
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
