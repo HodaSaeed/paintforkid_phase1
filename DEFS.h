@@ -21,6 +21,12 @@ enum ActionType //The actions supported (you can add more if needed)
 	BRNG_FRNT,		//Bring a figure to the front of all figures
 	SAVE,			//Save the whole graph to a file
 	LOAD,			//Load a graph from a file
+	SELECT,
+	ZOOM_IN,
+	ZOOM_OUT,
+	COPY,
+	CUT,
+	PASTE,
 	EXIT,			//Exit the application
 
 	DRAWING_AREA,	//A click on the drawing area
